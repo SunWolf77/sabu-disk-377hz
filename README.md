@@ -16,12 +16,20 @@ ancient Egyptian **Sabu Disk (~3000 BC)** as a **resonant field transducer**.
 4. **Log Data**: Arduino sketch provided for mic array capture.
 
 ## 🔹 STL Models
-Located in `/stl/`:
-- `sabu_disk_placeholder.stl` → full-scale model (~61 cm diameter).
-- `sabu_disk_placeholder_scaled.stl` → 1:3 scale (~20 cm diameter), easier for desktop 3D printers.
+⚠️ STL Disclaimer & Collaboration Invite
 
-Both are simplified placeholders (outer disk + hub + 3 lobes, 1 cm thickness).
-They can be replaced later with higher-fidelity CAD versions.
+The STL files currently provided (sabu_disk_placeholder.stl, sabu_disk_placeholder_scaled.stl) are simplified placeholders. They are not yet accurate replicas of the original Sabu Disk geometry and will produce flat meshes if directly 3D printed.
+
+They exist to:
+
+Demonstrate repo structure for open replication.
+
+Allow integration with FFT/PIV simulations.
+
+Reserve the slot for future accurate CAD models.
+
+Next Step: Full CAD/STL models based on museum schematics are in progress.
+💡 Collaborators with CAD expertise (FreeCAD, Fusion360, Blender) are invited to contribute accurate geometry!
 
 ## 🔹 Quickstart
 
