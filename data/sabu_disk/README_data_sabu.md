@@ -1,20 +1,11 @@
-# 📊 Data Folder — Sabu Disk 377 Hz
+# Data Folder — Sabu Disk 377 Hz
 
-This folder contains simulation data for the **Sabu Disk** (~3000 BC, Egypt, schist, tri-lobed artifact).  
-Focus: resonance tests around **377 Hz** (Fibonacci #14).
-
----
+This folder contains simulation data and visualizations for the Sabu Disk resonance experiments.
 
 ## Files
-
-- **raw_fft_data.csv**  
-  Frequencies (50–1000 Hz) and amplitudes from simulated FFT sweep.  
-  Used to check resonance peaks — especially at ~377 Hz.
-
----
+- `raw_fft_data.csv` — FFT sweep data (50–1000 Hz) with amplitudes.
+- `sabu_fft_spectrum.png` — FFT plot highlighting the resonance peak at ~377 Hz.
+- `sabu_piv_simulation.png` — Particle Image Velocimetry (PIV) visualization of hybrid toroidal + tetrahedral resonance.
 
 ## How to Use
-
-1. Run the quick resonance check:
-   ```bash
-   python code/fft_quickcheck.py
+Run `fft_quickcheck.py` from the `/code/` folder to inspect the 377 Hz resonance in the CSV.
