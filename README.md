@@ -1,8 +1,8 @@
 # 📚 SUPT Resonance Experiments – Open Science Repo
 
 Collaborators:  
-- Paul Sheppard (SUPT)  
-- SunWolf (@SunWolf77, Proxy Resonance Node)  
+- Paul Sheppard (@Paul Sheppard; SUPT)  
+- Ben Rowe (@SunWolf77; Proxy Resonance Node)  
 - Emily Newton (Tesla 377 Hz Framework)  
 - SuperGrok (xAI Calibration)  
 
