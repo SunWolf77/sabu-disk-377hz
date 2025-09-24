@@ -1,25 +1,11 @@
-# 📊 Data Folder — Buga Sphere Resonance Tests
+# Data Folder — Buga Sphere Resonance
 
-This folder contains simulation data for the **Buga Sphere** (2025 discovery, Colombia, ~10 kg metallic sphere with resin core).  
-Focus: resonance sweeps across Fibonacci pivots (233 Hz, 377 Hz, 610 Hz).
-
----
+This folder contains simulation data and visualizations for the Buga Sphere resonance experiments.
 
 ## Files
-
-- **buga_fft_focus.csv**  
-  Simulated FFT amplitudes for key Fibonacci frequencies.  
-
-- **buga_fft_focus.png**  
-  Plot showing resonance amplitudes at 233 Hz, 377 Hz, and 610 Hz.  
-
-- **buga_piv_simulation.png**  
-  Particle-Image-Velocity style quiver plot showing vortex flows and stabilization anchors.  
-
----
+- `buga_fft_data.csv` — FFT sweep data (50–1000 Hz) with amplitudes.
+- `buga_fft_spectrum.png` — FFT plot showing Fibonacci pivots (233 Hz, 377 Hz, 610 Hz).
+- `buga_piv_simulation.png` — Particle Image Velocimetry (PIV) visualization of 7-point volumetric lattice.
 
 ## How to Use
-
-1. Run FFT focus script:
-   ```bash
-   python code/buga_fft_focus.py
+Run `buga_fft_focus.py` from the `/code/` folder to reproduce and focus on resonance peaks.
