@@ -1,40 +1,35 @@
 import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
-from scipy.fft import fft, fftfreq
+import pandas as pd
 
-# Sampling parameters
+# Fibonacci pivots
+pivots = [233, 377, 610]
 fs = 44100
 duration = 1.0
-t = np.linspace(0, duration, int(fs * duration), endpoint=False)
+t = np.linspace(0, duration, int(fs * duration))
 
-# Fibonacci pivot frequencies
-target_freqs = [233, 377, 610]
-results = []
+# Simulate signals at pivots
+signals = [np.sin(2 * np.pi * f * t) for f in pivots]
+combined = np.sum(signals, axis=0)
 
-# Plot setup
-plt.figure(figsize=(10, 5))
+# FFT
+N = len(combined)
+yf = np.fft.fft(combined)
+xf = np.fft.fftfreq(N, 1 / fs)[:N//2]
 
-for f in target_freqs:
-    signal = np.sin(2 * np.pi * f * t)
-    N = len(signal)
-    yf = fft(signal)
-    xf = fftfreq(N, 1 / fs)[:N//2]
-    amplitude = 2.0/N * np.abs(yf[:N//2])
-    idx = np.argmin(np.abs(xf - f))
-    results.append((f, xf[idx], amplitude[idx]))
-    plt.plot(xf, amplitude, label=f"{f} Hz")
+# Save data
+df = pd.DataFrame({'Frequency (Hz)': xf, 'Amplitude': 2.0 / N * np.abs(yf[:N//2])})
+df.to_csv('../data/buga_sphere/buga_fft_focus.csv', index=False)
+print("FFT data saved to ../data/buga_sphere/buga_fft_focus.csv")
 
-# Save results as CSV
-df = pd.DataFrame(results, columns=["Target_Freq", "Closest_Freq", "Amplitude"])
-df.to_csv("../data/buga_sphere/buga_fft_focus.csv", index=False)
-
-# Save plot
-plt.title("Buga Sphere FFT Focused Simulation (233, 377, 610 Hz)")
-plt.xlabel("Frequency (Hz)")
-plt.ylabel("Amplitude")
-plt.xlim(0, 1000)
-plt.legend()
+# Plot
+plt.plot(xf, 2.0 / N * np.abs(yf[:N//2]))
+plt.title('Buga Sphere FFT Focus at Fibonacci Pivots')
+plt.xlabel('Frequency (Hz)')
+plt.ylabel('Amplitude')
+for p in pivots:
+    plt.axvline(p, color='r', linestyle='--')
 plt.grid()
-plt.tight_layout()
-plt.savefig("../data/buga_sphere/buga_fft_focus.png")
+plt.savefig('../data/buga_sphere/buga_fft_focus.png')
+plt.close()
+print("FFT plot saved to ../data/buga_sphere/buga_fft_focus.png")
