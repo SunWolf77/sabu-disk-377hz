@@ -47,6 +47,10 @@ git clone https://github.com/SunWolf77/sabu-disk-377hz.git
 cd sabu-disk-377hz
 pip install -r requirements.txt
 
+# Generate printable meshes (stdlib only — no OpenSCAD required)
+python code/export_stl_approx.py --scale 0.25 --out STL
+# → STL/sabu_approx_1to4.stl + STL/null_twin_1to4.stl
+
 # Teaching simulations only (not physical data)
 python code/fft_sweep.py
 python code/piv_simulation.py
@@ -58,12 +62,13 @@ python code/analyze_mic.py mic_a.wav mic_b.wav --compare
 
 ### Physical path (one pass)
 
-1. **Print** — [docs/REPLICA.md](docs/REPLICA.md) (Sabu-form + null twin; OpenSCAD approx in `code/openscad/`).  
-2. **Log the print** — [templates/print_log.csv](templates/print_log.csv).  
-3. **Pre-register** — [templates/pre_register.txt](templates/pre_register.txt).  
-4. **Run acoustics** — [docs/ACOUSTIC_TEST.md](docs/ACOUSTIC_TEST.md) (Mode A vs null).  
-5. **Blind & score** — [docs/NULL_TEST.md](docs/NULL_TEST.md).  
-6. **Commit cleanly** — [docs/REPLICATION.md](docs/REPLICATION.md).
+1. **Generate STLs** — `python code/export_stl_approx.py --scale 0.25 --out STL` (or OpenSCAD for finer lobes).  
+2. **Print** — [docs/REPLICA.md](docs/REPLICA.md) (Sabu-form + null twin).  
+3. **Log the print** — [templates/print_log.csv](templates/print_log.csv).  
+4. **Pre-register** — [templates/pre_register.txt](templates/pre_register.txt).  
+5. **Run acoustics** — [docs/ACOUSTIC_TEST.md](docs/ACOUSTIC_TEST.md) (Mode A vs null).  
+6. **Blind & score** — [docs/NULL_TEST.md](docs/NULL_TEST.md).  
+7. **Commit cleanly** — [docs/REPLICATION.md](docs/REPLICATION.md).
 
 ---
 
@@ -71,12 +76,13 @@ python code/analyze_mic.py mic_a.wav mic_b.wav --compare
 
 ```
 code/
+  export_stl_approx.py        # generate Sabu + null STLs (stdlib)
   analyze_mic.py              # Mode A metric from WAV / mono CSV
-  openscad/sabu_disk_approx.scad   # parametric approx + null_twin()
+  openscad/sabu_disk_approx.scad   # finer parametric approx + null_twin()
   acoustic_logger.ino         # relative multi-mic stream (not calibrated SPL)
   fft_sweep.py                # SIM only
   piv_simulation.py           # SIM only
-STL/                          # placeholders deprecated — prefer OpenSCAD export
+STL/                          # generate meshes here — see STL/README.md
 docs/
   REPLICA.md                  # dimensions, supports, print scales
   ACOUSTIC_TEST.md            # Mode A forced response + Mode B eigenmodes
@@ -95,8 +101,12 @@ requirements.txt
 
 See **[docs/REPLICA.md](docs/REPLICA.md)** for sourced dimensions, scale factors (1:2, 1:4, 1:10), support rules, and what a print may claim.
 
-- Preferred model: `code/openscad/sabu_disk_approx.scad` (kidney openings, inward lobe fold, `null_twin()`).
-- STL placeholders under `STL/` are **legacy / wrong geometry** — do not print those for a serious null test.
+```bash
+python code/export_stl_approx.py --scale 0.25 --out STL
+```
+
+- Finer lobes: `code/openscad/sabu_disk_approx.scad` (kidney openings, inward fold, `null_twin()`).
+- Do **not** print any leftover `*_placeholder*.stl` (wrong gear-like geometry).
 - PLA ≠ siltstone. Log mass, walls, and measured Ø with every acoustic run.
 
 ---
@@ -115,6 +125,10 @@ See **[docs/ACOUSTIC_TEST.md](docs/ACOUSTIC_TEST.md)**.
 ---
 
 ## Highest-leverage next step
+
+```bash
+python code/export_stl_approx.py --scale 0.25 --out STL
+```
 
 Print **1:4** Sabu + null → one blinded Mode A session → commit `mic_` files + filled templates.  
 Until that exists, this repo is a **protocol + teaching sims**. After that, it is a **bench**.
