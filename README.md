@@ -35,7 +35,7 @@ Catalogue note: El-Khouli, A. (1978). *Egyptian Stone Vessels*, Vol. 2 no. 5586;
 | **L3 — framework** | 377 Hz as F14, Z₀ rhyme, “modulator,” ancient intent |
 
 - Scripts under `code/fft_sweep.py` and `code/piv_simulation.py` are **simulations / teaching plots**. They are **not** microphone recordings of a physical disk.
-- A real 377 Hz claim requires: physical replica → fixed drive → **null twin** → blinded score sheet (see `docs/NULL_TEST.md`).
+- A real 377 Hz claim requires: physical replica → fixed drive → **null twin** → blinded score sheet (see `docs/NULL_TEST.md` and `docs/ACOUSTIC_TEST.md`).
 - Printing the shape proves **form is reproducible**. It does not prove resonance or purpose.
 
 ---
@@ -54,8 +54,9 @@ data/
   sabu_disk/         # outputs (sim or real — label in filename)
   buga_sphere/       # separate extension study
 docs/
-  REPLICA.md         # 3D-print instructions + sourced measurements
-  NULL_TEST.md       # how to run a null / blind test
+  REPLICA.md         # 3D-print instructions + supports + sourced measurements
+  NULL_TEST.md       # blind / kill-rule protocol
+  ACOUSTIC_TEST.md   # Mode A forced response + Mode B eigenmodes
   citation_sheet.md
   README_docs.md
 ```
@@ -75,7 +76,11 @@ python fft_sweep.py
 python piv_simulation.py
 ```
 
-For a **physical** test: print from `docs/REPLICA.md`, wire `acoustic_logger.ino`, run the null protocol in `docs/NULL_TEST.md`.
+For a **physical** test:
+
+1. Print from [`docs/REPLICA.md`](docs/REPLICA.md) (Sabu-form + null twin).  
+2. Run acoustics per [`docs/ACOUSTIC_TEST.md`](docs/ACOUSTIC_TEST.md).  
+3. Blind and score per [`docs/NULL_TEST.md`](docs/NULL_TEST.md).
 
 ---
 
@@ -85,9 +90,20 @@ See **[docs/REPLICA.md](docs/REPLICA.md)** for:
 
 - Sourced full-scale dimensions (61 cm Ø)
 - Recommended scale factors (1:2, 1:4, 1:10)
-- OpenSCAD approximate model
+- OpenSCAD approximate model + support recommendations
 - Material notes (PLA ≠ siltstone)
 - What a print can and cannot claim
+
+---
+
+## Acoustic testing
+
+See **[docs/ACOUSTIC_TEST.md](docs/ACOUSTIC_TEST.md)** for:
+
+- **Mode A** — forced response vs null (default null-test path)
+- **Mode B** — structural eigenmodes of the print
+- Instrumentation floor and logger limits
+- Pre-register template and allowed claims
 
 ---
 
