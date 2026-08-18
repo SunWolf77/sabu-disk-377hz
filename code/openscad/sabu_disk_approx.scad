@@ -177,8 +177,14 @@ module null_twin() {
 sabu_approx();
 // null_twin();  // uncomment to export the null object instead
 
-// Print tips:
-// - scale_factor 0.25 or 0.5 for desktop beds
-// - openings must stay open in the slicer (no accidental supports plugging kidneys)
-// - measure finished Ø; do not claim museum-exact
-// - export null_twin under a coded name for blinded acoustic runs
+// ---------------------------------------------------------------------------
+// Support structure recommendations (FDM) — full detail in docs/REPLICA.md §5
+// ---------------------------------------------------------------------------
+// Orientation: bowl UP (floor on bed). Avoid on-edge.
+// Need supports under: lobe undersides if SPOKE_RISE is high (tree/organic).
+// Never plug: the three kidney openings or the hub bore.
+// Workflow: auto supports → paint-exclude kidneys + bore → keep pillars under solid lobes only.
+// Settings start: tree supports, density 10–15%, top Z gap ~0.25–0.35 mm, overhang ~50–55°.
+// Null twin: usually support-free bowl-up.
+// After print: cool fully; open kidneys to light; photo before acoustic runs.
+// scale_factor 0.25 or 0.5 for desktop beds; measure finished Ø; do not claim museum-exact.
