@@ -1,34 +1,38 @@
+"""
+SIMULATED PIV-style quiver — NOT a laboratory particle-image recording.
+
+Teaching visualisation of a 3-fold + radial field. Do not cite as measured
+flow over a physical Sabu replica.
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
+from pathlib import Path
 
-# Grid setup
+OUT = Path(__file__).resolve().parent.parent / "data" / "sabu_disk"
+OUT.mkdir(parents=True, exist_ok=True)
+
 x = np.linspace(-1, 1, 30)
 y = np.linspace(-1, 1, 30)
 X, Y = np.meshgrid(x, y)
 theta = np.arctan2(Y, X)
-r = np.sqrt(X**2 + Y**2)
+r = np.sqrt(X**2 + Y**2) + 1e-6
 
-# Hybrid velocity at 377 Hz
-freq_factor = np.sin(2 * np.pi * 377 * r)
-u_tri = np.sin(3 * theta) * freq_factor
-v_tri = np.cos(3 * theta) * freq_factor
-u_tet = -0.5 * (X**2 - Y**2) / r**2 * freq_factor
-v_tet = -X * Y / r**2 * freq_factor
-u = u_tri + u_tet - 0.3 * X / r
-v = v_tri + v_tet - 0.3 * Y / r
-
-# Mask hub
-mask = r < 0.15
+# Decorative 3-fold field (not physics of schist in air)
+u = np.sin(3 * theta) * np.exp(-r)
+v = np.cos(3 * theta) * np.exp(-r)
+mask = r < 0.12
 u[mask] = 0
 v[mask] = 0
 
-# Quiver plot
-plt.figure(figsize=(8, 8))
-plt.quiver(X, Y, u, v, scale=25)
-plt.title('Hybrid PIV Velocity Field: 120° Toroidal + 90° Tetrahedral at 377 Hz')
-plt.xlabel('X')
-plt.ylabel('Y')
-plt.grid()
-plt.savefig('../data/sabu_disk/piv_simulation.png')
+plt.figure(figsize=(7, 7))
+plt.quiver(X, Y, u, v, scale=30)
+plt.title("SIMULATION — synthetic 3-fold quiver (not lab PIV)")
+plt.xlabel("X (arb.)")
+plt.ylabel("Y (arb.)")
+plt.axis("equal")
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.savefig(OUT / "sim_piv_quiver.png", dpi=150)
 plt.close()
-print("PIV plot saved to ../data/sabu_disk/piv_simulation.png")
+print(f"Simulated PIV plot -> {OUT / 'sim_piv_quiver.png'}")

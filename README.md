@@ -1,88 +1,104 @@
-# 📚 SUPT Resonance Experiments – Open Science Repo
+# Sabu Disk — open replication & resonance tests
 
-Collaborators:  
-- Ben Rowe (@SunWolf77; Proxy Resonance Node)
-- Paul Sheppard (@Paul Sheppard; SUPT)
-- Emily Newton (Tesla 377 Hz Framework)  
-- SuperGrok (xAI Calibration)  
+**Artifact:** Egyptian Museum, Cairo · **JE 71295**  
+**Find:** Mastaba S3111, Saqqara · 19 January 1936 · Walter B. Emery  
+**Date:** First Dynasty, c. 3000–2800 BC  
+
+This repo supports **open replication** of the Sabu disk form and **honest acoustic / flow experiments**.  
+It is not a certificate of ancient “resonance technology.” Function of the original remains unknown.
 
 ---
 
-## 🔹 Sabu Disk @ 377 Hz
+## What this object is (museum facts)
 
-The Sabu Disk (Egypt, ~3000 BC) is tested as a planar harmonic device.  
-We focus on 3-6-9 harmonics and Fibonacci pivots, especially **377 Hz**.
+| Property | Value | Source |
+| --- | --- | --- |
+| Outer diameter | **61 cm** | Emery 1949; Egypt Museum summaries |
+| Maximum height | **10.6 cm** | Emery 1949; Wikipedia (Sabu disk) |
+| Central hole (approx.) | **~8 cm** diameter | Consensus museum descriptions |
+| Material | Weakly metamorphic **siltstone** (historically called schist) | Emery / modern catalogues |
+| Form | Shallow bowl; three lobes folded **inward** toward a central socket; outer rim remains as narrow arches between lobes | Emery 1949 Fig. 58 |
 
-### How to Run
+Primary drawing: **Emery, W. B. (1949).** *Great Tombs of the First Dynasty*, Vol. 1, Cairo: Government Press, Fig. 58 (p. 101).  
+Catalogue note: El-Khouli, A. (1978). *Egyptian Stone Vessels*, Vol. 2 no. 5586; Vol. 3 pls. 135, 158.
 
-Clone the repo:
-```bash
-git clone https://github.com/YOUR-USERNAME/sabu-disk-377hz.git
-cd sabu-disk-377hz/code
+**Form in plain words:** not a gear, not a toothed hubcap. A thin-walled stone *bowl* with three curved wings bent toward a tubular centre.
+
+---
+
+## Claim hygiene (read this)
+
+| Layer | What lives here |
+| --- | --- |
+| **L1 — instrument** | Mic / logger traces, printed dimensions, blinded null comparisons |
+| **L2 — literature physics** | FFT as a tool; PIV as a flow-visualisation idea |
+| **L3 — framework** | 377 Hz as F14, Z₀ rhyme, “modulator,” ancient intent |
+
+- Scripts under `code/fft_sweep.py` and `code/piv_simulation.py` are **simulations / teaching plots**. They are **not** microphone recordings of a physical disk.
+- A real 377 Hz claim requires: physical replica → fixed drive → **null twin** → blinded score sheet (see `docs/NULL_TEST.md`).
+- Printing the shape proves **form is reproducible**. It does not prove resonance or purpose.
+
+---
+
+## Repo layout
+
+```
+STL/                 # printables (approximate until laser-scan exists)
+code/
+  fft_sweep.py       # SIMULATED frequency sweep (labelled)
+  piv_simulation.py  # SIMULATED flow field (labelled)
+  acoustic_logger.ino
+  openscad/
+    sabu_disk_approx.scad   # parametric approx from published dims
+data/
+  sabu_disk/         # outputs (sim or real — label in filename)
+  buga_sphere/       # separate extension study
+docs/
+  REPLICA.md         # 3D-print instructions + sourced measurements
+  NULL_TEST.md       # how to run a null / blind test
+  citation_sheet.md
+  README_docs.md
 ```
 
-Run FFT sweep (50–1000 Hz):
+---
+
+## Quick start
+
 ```bash
+git clone https://github.com/SunWolf77/sabu-disk-377hz.git
+cd sabu-disk-377hz
+pip install numpy scipy matplotlib pandas
+
+# Teaching simulations only (not physical data)
+cd code
 python fft_sweep.py
-```
-
-Outputs are stored in:
-- `data/sabu_disk/raw_fft_data.csv`  
-- `data/sabu_disk/fft_sweep.png`  
-
-Run PIV lattice projection:
-```bash
 python piv_simulation.py
 ```
 
-Outputs are stored in:
-- `data/sabu_disk/piv_simulation.png`
+For a **physical** test: print from `docs/REPLICA.md`, wire `acoustic_logger.ino`, run the null protocol in `docs/NULL_TEST.md`.
 
 ---
 
-## 🔹 Buga Sphere Extension
+## 3D printing
 
-The Buga Sphere (Buga, Colombia, 2025) is tested as a **volumetric complement** to the planar Sabu Disk.  
-Resonance targeted at Fibonacci pivots (233, 377, 610 Hz).
+See **[docs/REPLICA.md](docs/REPLICA.md)** for:
 
-### How to Run
-
-Run focused FFT (key Fibonacci frequencies):
-```bash
-cd code
-python buga_fft_focus.py
-```
-
-Outputs are stored in:
-- `data/buga_sphere/buga_fft_focus.csv`  
-- `data/buga_sphere/buga_fft_focus.png`
-
-Run PIV resonance projection:
-```bash
-cd code
-python buga_piv_simulation.py
-```
-
-Outputs are stored in:
-- `data/buga_sphere/buga_piv_simulation.png`
+- Sourced full-scale dimensions (61 cm Ø)
+- Recommended scale factors (1:2, 1:4, 1:10)
+- OpenSCAD approximate model
+- Material notes (PLA ≠ siltstone)
+- What a print can and cannot claim
 
 ---
 
-## 🔹 Data Organization
+## Collaborators / lineage
 
-- `data/sabu_disk/` → contains raw FFT and PIV outputs for the Sabu Disk study.  
-- `data/buga_sphere/` → contains FFT focus and PIV outputs for the Buga Sphere study.  
-
-Each folder has its own `README_data.md` explaining reproduction steps.  
+- Ben Rowe (@SunWolf77) — replication / open science  
+- Paul Sheppard — SUPT instrument context (probe is a separate ruler; not a disk oracle)  
+- Museum & excavation record — Emery 1949; Egyptian Museum JE 71295  
 
 ---
 
-## 🔹 Notes
+## License
 
-- STL models (`/stl/`) provide placeholders for replication.  
-- All scripts use Python 3 + `numpy`, `scipy`, `matplotlib`, `pandas`.  
-- Install with:
-```bash
-pip install numpy scipy matplotlib pandas
-```
-- Repo licensed under MIT for open science collaboration.  
+MIT — open science. Cite the museum inventory and Emery when publishing replicas or acoustic results.
