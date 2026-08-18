@@ -1,11 +1,17 @@
-# Data Folder — Sabu Disk 377 Hz
+# data/sabu_disk — simulation outputs (not mic)
 
-This folder contains simulation data and visualizations for the Sabu Disk resonance experiments.
+All current files in this folder are **teaching / simulation** artifacts.
 
-## Files
-- `raw_fft_data.csv` — FFT sweep data (50–1000 Hz) with amplitudes.
-- `sabu_fft_spectrum.png` — FFT plot highlighting the resonance peak at ~377 Hz.
-- `sabu_piv_simulation.png` — Particle Image Velocimetry (PIV) visualization of hybrid toroidal + tetrahedral resonance.
+| File | Status |
+| --- | --- |
+| `raw_fft_data.csv` | SIM — synthetic sweep product (legacy name) |
+| `sabu_fft_spectrum.png` | SIM plot |
+| `sabu_piv_simulation.png` | SIM quiver |
 
-## How to Use
-Run `fft_quickcheck.py` from the `/code/` folder to inspect the 377 Hz resonance in the CSV.
+Real Mode A recordings should be added as `mic_*.wav` (or mono CSV) and analyzed with:
+
+```bash
+python code/analyze_mic.py path/to/mic_run.wav --f0 377 --half 2
+```
+
+See `docs/ACOUSTIC_TEST.md`.

@@ -1,0 +1,11 @@
+# local captures
+*.wav
+!docs/**
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+venv/
+# slicer leftovers
+*.gcode
+*.3mf

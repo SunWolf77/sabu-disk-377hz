@@ -1,13 +1,15 @@
 # STL folder
 
-Older files `sabu_disk_placeholder.stl` and `sabu_disk_placeholder_scaled.stl` were **geometry placeholders** and do not match the museum bowl-and-inward-lobes form (Emery 1949).
+| File | Use |
+| --- | --- |
+| `sabu_approx_1to4.stl` | Preferred desk-scale (~152.5 mm) — generate with `export_stl_approx.py` |
+| `null_twin_1to4.stl` | Matching null twin |
+| `sabu_disk_placeholder*.stl` | **Deprecated** — old gear-like geometry, do not print |
+| `buga_sphere_placeholder.stl` | Placeholder only |
 
-**Preferred path:** generate a mesh from:
-
-```text
-code/openscad/sabu_disk_approx.scad
+```bash
+python code/export_stl_approx.py --scale 0.25 --out STL
+# writes sabu_approx_scale0p25.stl and null_twin_scale0p25.stl
 ```
 
-using the published dimensions in `docs/REPLICA.md` (Ø 61 cm class, H 10.6 cm, hole ~8 cm).
-
-When a museum-grade scan becomes available, replace this approximate model and note the scan source in the commit message.
+Finer lobes: `code/openscad/sabu_disk_approx.scad`. Approximate only — not JE 71295 scan.

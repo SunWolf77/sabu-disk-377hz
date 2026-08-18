@@ -1,0 +1,15 @@
+Date:
+Operator:
+Scale factor / measured Ø / H / mass (Sabu):
+Scale factor / measured Ø / H / mass (null):
+Filament / infill / walls:
+Drive type (dwell / sweep / noise):
+Target band f0 ± Δf:
+Metric definition:
+Kill rule:
+n repeats / orientations:
+Mic positions (sketch or photo):
+Mount description:
+Room notes:
+Key holder / scorer:
+Positive check (pass/fail):

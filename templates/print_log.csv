@@ -1,0 +1,3 @@
+date,object_code,object_type,scale_factor,measured_od_mm,measured_h_mm,measured_mass_g,filament,infill_pct,walls,nozzle_mm,layer_mm,kidneys_open,notes
+2026-08-18,OBJ-A,sabu_approx,0.25,,,,,,3,0.4,0.2,yes,example row — replace with real values
+2026-08-18,OBJ-B,null_twin,0.25,,,,,,3,0.4,0.2,n/a,example row — replace with real values
