@@ -41,6 +41,24 @@ From the published description (Emery / museum summaries):
 
 If your print looks like a bicycle sprocket, it is the wrong object.
 
+### OpenSCAD lobe model (current)
+
+File: `code/openscad/sabu_disk_approx.scad`
+
+| Feature | How it is built |
+| --- | --- |
+| Plan openings | Three **kidney** voids (`OPEN_HALF`, `OPEN_R0`/`OPEN_R1`) — smooth, not sphere bites |
+| Spokes / lobes | Remaining solid between kidneys + raised **lobe_surface** hull (rim → mid-fold → hub) |
+| Rim arches | Outer ring kept; kidneys stop short of the lip |
+| Null twin | `null_twin()` module — same envelope, no kidneys / no lobe surfaces |
+
+Tune curvature without rewriting the file:
+
+- `OPEN_HALF` ↑ → wider openings, narrower spokes  
+- `OPEN_HALF` ↓ → wider spokes (more “steering wheel”)  
+- `SPOKE_RISE` ↑ → stronger inward fold in elevation  
+- `OPEN_R0` / `OPEN_R1` → move openings toward hub or rim  
+
 ---
 
 ## 3. Recommended print scales
@@ -54,7 +72,7 @@ Full scale (610 mm) needs a large-format printer or segmented print.
 | **1:4** | 152.5 mm | 26.5 mm | Desk acoustic null tests |
 | **1:10** | 61 mm | 10.6 mm | Geometry check only |
 
-OpenSCAD parameter `scale_factor` in `code/openscad/sabu_disk_approx.scad` sets this (1.0 = full scale).
+OpenSCAD parameter `scale_factor` sets this (1.0 = full scale). Default in file is `0.25`.
 
 ---
 
@@ -63,7 +81,7 @@ OpenSCAD parameter `scale_factor` in `code/openscad/sabu_disk_approx.scad` sets 
 - **Material:** PLA or PETG for geometry tests. Stone-fill filaments are cosmetic only — density and stiffness ≠ siltstone.  
 - **Orientation:** Flat on the bed (bowl opening up) unless you segment.  
 - **Walls / infill:** High perimeter count; thin original walls are fragile — thicken slightly for PLA if needed, and **record the deviation**.  
-- **Supports:** Likely under inward lobe undersides depending on model.  
+- **Supports:** Only if the slicer cannot bridge lobe undersides; **do not plug the kidney openings**.  
 - **Tolerance:** Central hole should stay circular; measure with calipers after print and log Ø.
 
 ---
@@ -72,10 +90,12 @@ OpenSCAD parameter `scale_factor` in `code/openscad/sabu_disk_approx.scad` sets 
 
 1. Open `code/openscad/sabu_disk_approx.scad`.  
 2. Set `scale_factor` (e.g. `0.25` for 1:4).  
-3. Render → export STL.  
-4. Slice → print.  
-5. Photograph next to a ruler; log actual diameter and height.  
-6. For acoustic work: build a **null twin** (same mass class, no lobes or scrambled lobes) and follow `docs/NULL_TEST.md`.
+3. Optional: nudge `OPEN_HALF` / `SPOKE_RISE` until plan view matches Emery’s wide-spoke look.  
+4. Render → export STL (`sabu_approx`).  
+5. Comment out `sabu_approx();`, uncomment `null_twin();`, export second STL under a **code name**.  
+6. Slice → print both.  
+7. Photograph next to a ruler; log actual diameter and height.  
+8. Acoustic work: follow `docs/NULL_TEST.md`.
 
 ---
 
@@ -94,4 +114,5 @@ OpenSCAD parameter `scale_factor` in `code/openscad/sabu_disk_approx.scad` sets 
 - [ ] Replace approx SCAD with measurements from a licensed museum scan or measured replica.  
 - [ ] Segmented 1:1 print plan (bolt circle, alignment pins).  
 - [ ] Density-matched composite if acoustic mass loading matters.  
-- [ ] Publish caliper sheet + photos with every acoustic CSV.
+- [ ] Publish caliper sheet + photos with every acoustic CSV.  
+- [ ] Optional: tighter lobe profile from Emery Fig. 58 digitised centreline.
