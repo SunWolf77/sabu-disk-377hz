@@ -1,0 +1,3 @@
+# Binary meshes — avoid CRLF corruption on Windows
+*.stl binary
+*.STL binary

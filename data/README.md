@@ -1,9 +1,11 @@
 # Data directory
 
+> **Everything here is SIMULATION / teaching unless the filename starts with `mic_`.**
+
 | Path | Status |
 | --- | --- |
-| `sabu_disk/*.csv`, `*.png` (legacy names) | **SIMULATION / teaching** — not microphone data |
-| `buga_sphere/*` | **SIMULATION / teaching** unless a file is explicitly prefixed `mic_` |
+| `sabu_disk/*` | SIM — synthetic FFT / PIV teaching outputs |
+| `buga_sphere/*` | SIM — extension study only (not the Sabu null-test path) |
 | Future `mic_*.wav` / `mic_*.csv` | Real recordings only |
 
 ## Naming rule
@@ -14,6 +16,6 @@
 | `mic_` | Real sensor recording |
 | `null_` | Null-twin run (after unblinding, or in private notes) |
 
-If a legacy file has no prefix, treat it as **sim** until proven otherwise.
+Legacy names without a prefix → treat as **sim**.
 
-Do not publish a 377 Hz “result” from files in this folder without a matching pre-register sheet and null twin metric (`docs/ACOUSTIC_TEST.md`, `docs/NULL_TEST.md`).
+Do not publish a 377 Hz “result” from this folder without a pre-register sheet and a null-twin metric ([docs/ACOUSTIC_TEST.md](../docs/ACOUSTIC_TEST.md), [docs/NULL_TEST.md](../docs/NULL_TEST.md)).

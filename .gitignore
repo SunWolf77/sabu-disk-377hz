@@ -6,6 +6,9 @@ __pycache__/
 .DS_Store
 .venv/
 venv/
-# slicer leftovers
+
+# slicer leftovers (commit intentional exports under STL/ only)
 *.gcode
-*.3mf
+
+# generated meshes optional to keep local-only; preferred tracked names:
+# STL/sabu_approx_1to4.stl  STL/null_twin_1to4.stl

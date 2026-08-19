@@ -1,21 +1,29 @@
-# Tech notes in plain language
+# Docs map
 
-## FFT (Fast Fourier Transform)
+| File | What it is |
+| --- | --- |
+| [REPLICA.md](REPLICA.md) | Museum dimensions, print scales, supports, allowed claims |
+| [ACOUSTIC_TEST.md](ACOUSTIC_TEST.md) | Mode A (forced response vs null) · Mode B (eigenmodes) |
+| [NULL_TEST.md](NULL_TEST.md) | Blinding steps + pre-registered kill rule |
+| [REPLICATION.md](REPLICATION.md) | How to add STL commits or mic runs without breaking hygiene |
+| [citation_sheet.md](citation_sheet.md) | Emery, El-Khouli, JE 71295, and related citations |
 
-Splits a recorded (or simulated) waveform into frequency components.  
-**In this repo:** `fft_sweep.py` builds a **synthetic** sweep for teaching. A real test needs a microphone recording of a driven object.
+Root overview: [../README.md](../README.md)  
+Mesh workflow: [../STL/README.md](../STL/README.md)
 
-## PIV (Particle Image Velocimetry)
+---
 
-Lab method to image how seeded fluid moves.  
-**In this repo:** `piv_simulation.py` draws a **synthetic** quiver field. It is not a laser lab run on a printed disk.
+## Terms in plain language
 
-## STL / OpenSCAD
+**FFT** — splits a waveform into frequencies.  
+`fft_sweep.py` is **synthetic** teaching data. Real tests need `mic_` recordings.
 
-Printable mesh.  
-`code/openscad/sabu_disk_approx.scad` approximates published dimensions (61 cm Ø class). Replace when a museum-grade scan is available.
+**PIV** — lab method for fluid motion imaging.  
+`piv_simulation.py` is a **synthetic** quiver plot, not a lab run.
 
-## Why the labels matter
+**STL** — triangle mesh for printing.  
+Generate with `code/export_stl_approx.py` or OpenSCAD. Approximate geometry only.
 
-Calling a simulation a “result” collapses measurement into story.  
-Keep filenames honest: `sim_`, `mic_`, `null_`.
+**Null twin** — control object with the same outer envelope but **no** three-lobe openings. Required for Mode A.
+
+**L1 / L2 / L3** — instrument data / standard tools / interpretive framework. Keep them separate.
