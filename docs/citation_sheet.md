@@ -31,6 +31,11 @@ Weakly metamorphic siltstone (older literature often says “schist”). Fragile
 - Physical claims require mic data + null twin + pre-registered metric (`docs/NULL_TEST.md`).  
 - SUPT probe (Sheppard) is a separate instrument for ordered series — not proof of disk function.
 
+## Buga extension (out of Sabu L1)
+
+Scripts under `code/buga_*.py` and files in `data/buga_sphere/` are **synthetic teaching plots** only (`docs/BUGA_EXTENSION.md`).  
+They do **not** document or validate public media claims about a metallic sphere reported from Buga, Colombia (2025–). Those claims are external; this repo does not host their primary data.
+
 ## Optional cultural / framework notes (L3 only)
 
 - 377 ≈ F14; free-space impedance Z₀ ≈ 376.73 Ω — a **numeric rhyme**, not a measured carving tone on the artifact.  
