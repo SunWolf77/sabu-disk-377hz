@@ -5,7 +5,7 @@
 | Path | Status |
 | --- | --- |
 | `sabu_disk/*` | SIM — synthetic FFT / PIV teaching outputs |
-| `buga_sphere/*` | SIM — extension study only (not the Sabu null-test path) |
+| `buga_sphere/*` | SIM — **extension only** (not Sabu null-test); see [buga_sphere/README_data_buga.md](buga_sphere/README_data_buga.md) |
 | Future `mic_*.wav` / `mic_*.csv` | Real recordings only |
 
 ## Naming rule
