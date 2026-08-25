@@ -17,15 +17,16 @@ They measured ±2π/3 on TE₁,₀,n helicity modes of a D₃ Möbius ring vs a 
 
 ## Attribution
 
-| | Hz (377 as Fibonacci drive) | Ω (Z₀ ≈ 376.73) | Artifact |
+| | Hz arm | Ω (Z₀ ≈ 376.73) | Artifact |
 | --- | --- | --- | --- |
-| **Newton, *Tesla Towers 377*** | Proposed 377 Hz as F14 / 3-6-9 correction | Not in that paper | Not a museum reading |
+| **Newton, *Tesla Towers 377*** | 377 Hz as F14 / 3-6-9 correction | Not in that paper | Not a museum reading |
+| **@TORUS_OMEGA13** | 377 as high harmonic; fluid decade 37.7 / 29 / 33 / 23 Hz | Not that claim | Not a museum reading |
 | **Sheppard, SUPT** | Proxy stance: check the maps | Same | Not a function claim |
 | **Paterson et al. (UWA)** | — | — | Möbius ±2π/3 (microwave) |
-| **This protocol** | Uses 377 Hz as one optional F+ cell | Adds Z₀ as the other map | Replica + 2×2 on that null |
+| **This protocol** | Uses both F sets as optional cells | Adds Z₀ as the other map | Replica + 2×2 on that null |
 | **Emery / JE 71295** | — | — | Form and find only |
 
-Newton is cited for the **frequency target**. Paterson et al. are cited for the **holonomy null**. Neither owns the Z₀ arm or the disk.
+Newton is cited for the **high-F target**. @TORUS_OMEGA13 is cited for the **low-F / fluid-decade target**. Paterson et al. are cited for the **holonomy null**. None of them owns the Z₀ arm or the disk.
 
 ## Claim (one line)
 
@@ -48,7 +49,7 @@ Triangular Möbius vs mirror-symmetric twin (Paterson et al.): topological Berry
 | **F on 377·φⁿ** | F+ Z+ | F+ Z− |
 | **F detuned ~20%** | F− Z+ | F− Z− |
 
-Parallel arm: 37.7 / 29 / 33 / 23 Hz (fluid decade).
+**Parallel arm (TORUS):** 37.7 / 29 / 33 / 23 Hz. Same 2×2 in Z, different F set. 377 treated as a high harmonic of that decade, not as the only interesting drive.
 
 **Scale d/λ, not raw hertz.** 377 Hz acoustic ≠ 377 MHz microwave. Stub: `python code/scale_d_lambda.py`. Teaching cavity sizes in Paterson et al.: v ≈ 19.92 mm, R ≈ 23.67 mm.
 
@@ -56,9 +57,9 @@ Parallel arm: 37.7 / 29 / 33 / 23 Hz (fluid decade).
 
 - All four cells at ±2π/3 → coincidence
 - Extra only in Z+ → vacuum-match claim
-- Extra only in F+ → golden-lock claim (Newton-style frequency arm)
+- Extra only in F+ (377 ladder) → golden-lock / Newton Hz arm
 - Extra only in F+ Z+ → joint claim
-- Pattern on 29–38 Hz, weak at 377 Hz → fluid-geometry claim
+- Extra on 29–38 Hz, weak at 377 Hz → fluid-decade / TORUS claim
 
 ## Extract γ
 
