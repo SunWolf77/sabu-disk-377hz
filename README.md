@@ -16,6 +16,41 @@ Open tools to **copy the published form** and run **honest shape-vs-null acousti
 | Who owns which claim | [docs/citation_sheet.md](docs/citation_sheet.md) |
 | Print + mic | [Physical path](#physical-path-one-pass) |
 
+## Two tests (do not mix)
+
+```mermaid
+flowchart LR
+  subgraph replica [Replica lane — L1]
+    A[Sabu-form print] --> C[Same drive]
+    B[Null twin print] --> C
+    C --> D[Blinded Mode A score]
+  end
+  subgraph rhyme [377 rhyme lane — L3]
+    E[F on or off 377·φⁿ] --> G[Twin Möbius Δf]
+    F[Z ≈ Z0 or mismatch] --> G
+    G --> H["γ vs ±2π/3"]
+  end
+```
+
+Replica lane answers: *does this shape differ from a null under the same drive?*  
+Rhyme lane answers: *does extra holonomy track Hz, Ω, both, or neither?*  
+A peak on a teaching FFT is neither answer.
+
+```mermaid
+flowchart TD
+  R["Recover ±2π/3 in every cell first"]
+  R --> Zp["Extra only in Z+"]
+  R --> Fp["Extra only in F+"]
+  R --> J["Extra only in F+ Z+"]
+  R --> N["All cells still ±2π/3"]
+  R --> T["Pattern on 29–38 Hz"]
+  Zp --> Zc[vacuum-match claim]
+  Fp --> Fc[golden-lock / Newton Hz arm]
+  J --> Jc[joint claim]
+  N --> Nc[coincidence]
+  T --> Tc[fluid-decade claim]
+```
+
 ---
 
 ## Who this is for
@@ -85,6 +120,16 @@ python code/analyze_mic.py mic_a.wav mic_b.wav --compare
 ```
 
 ### Physical path (one pass)
+
+```mermaid
+flowchart TD
+  S[export_stl_approx.py 1:4] --> P[Print Sabu-form AND null]
+  P --> L[print_log.csv]
+  L --> R[pre_register.txt]
+  R --> M[Mode A same drive]
+  M --> B[Blind + NULL_TEST.md]
+  B --> C[Commit mic_ files]
+```
 
 1. **Generate STLs** — `python code/export_stl_approx.py --scale 0.25 --out STL`  
 2. **Print** — [docs/REPLICA.md](docs/REPLICA.md) (Sabu-form **and** null twin)  
