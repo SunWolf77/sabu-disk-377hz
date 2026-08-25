@@ -3,12 +3,18 @@
 **Egyptian Museum, Cairo · JE 71295** · Mastaba S3111, Saqqara · First Dynasty (c. 3000–2800 BC)  
 Discovered 19 January 1936 by Walter B. Emery
 
-> **Status:** Protocol-ready · teaching simulations labelled · **no physical mic results yet**  
-> This is **not** a certificate of ancient “resonance technology.” Function of the original remains unknown.
+> **Status: protocol frozen.** Teaching sims labelled. **No `mic_` results yet.**  
+> This is **not** a certificate of ancient “resonance technology.” Function of the original remains unknown.  
+> Next work is a print + blinded Mode A session — not more documents.
 
 Open tools to **copy the published form** and run **honest shape-vs-null acoustic comparisons**.
 
-**X-thread freeze (377 Hz · 377 Ω):** [docs/BERRY_377.md](docs/BERRY_377.md) — 2×2 holonomy vs Möbius ±2π/3. Not Haldane. Not Kane–Mele.
+| Read | File |
+| --- | --- |
+| Museum form | this README → [Museum facts](#museum-facts) |
+| 377 Hz / Z₀ discriminator | [docs/BERRY_377.md](docs/BERRY_377.md) |
+| Who owns which claim | [docs/citation_sheet.md](docs/citation_sheet.md) |
+| Print + mic | [Physical path](#physical-path-one-pass) |
 
 ---
 
@@ -23,7 +29,7 @@ Open tools to **copy the published form** and run **honest shape-vs-null acousti
 | Are reviewing claims | [Claim hygiene](#claim-hygiene) |
 | Just browsing | Read status line above — no action required |
 
-No printer? You do **not** need to generate STLs or run acoustics. The docs are complete for when capacity exists.
+No printer? You do **not** need to generate STLs or run acoustics.
 
 ---
 
@@ -50,7 +56,7 @@ No printer? You do **not** need to generate STLs or run acoustics. The docs are 
 | --- | --- |
 | **L1 — instrument** | Mic traces, measured print dimensions, blinded null scores |
 | **L2 — literature tools** | FFT, PIV ideas, standard acoustics |
-| **L3 — framework** | Optional 377 Hz drive (Newton); Z₀ rhyme (this repo); “modulator,” ancient intent |
+| **L3 — framework** | Optional 377 Hz drive (Newton); Z₀ rhyme (this repo) |
 
 - Scripts under `code/fft_sweep.py`, `code/piv_simulation.py`, and files in `data/` **without** a `mic_` prefix are **simulations / teaching** — not microphone data.
 - A real band claim needs: print → fixed drive → **null twin** → `analyze_mic.py` → blinded score ([docs/NULL_TEST.md](docs/NULL_TEST.md)).
@@ -110,11 +116,12 @@ data/                            # SIM unless filename is mic_*
 | Doc | Role |
 | --- | --- |
 | [docs/BERRY_377.md](docs/BERRY_377.md) | 377 Hz / Z₀ holonomy 2×2 · Möbius ±2π/3 |
+| [docs/citation_sheet.md](docs/citation_sheet.md) | Who owns what · Emery, Newton, Sheppard |
 | [docs/REPLICA.md](docs/REPLICA.md) | Dimensions, supports, what a print may claim |
 | [docs/ACOUSTIC_TEST.md](docs/ACOUSTIC_TEST.md) | Mode A forced response · Mode B eigenmodes |
 | [docs/NULL_TEST.md](docs/NULL_TEST.md) | Blind protocol + kill rule |
 | [docs/REPLICATION.md](docs/REPLICATION.md) | How to add a run without breaking hygiene |
-| [docs/citation_sheet.md](docs/citation_sheet.md) | Who owns what · Emery, Newton, Sheppard |
+| [docs/README_docs.md](docs/README_docs.md) | Docs map |
 
 ---
 
@@ -139,7 +146,7 @@ Full notes: [docs/REPLICA.md](docs/REPLICA.md).
 | **A — forced response** | Under the same drive, does Sabu-form differ from the null twin in a chosen band? |
 | **B — eigenmodes** | What does *this print* ring at when struck? |
 
-**377 Hz** may be used as a drive (Newton’s Fibonacci-target proposal). It is **not** a museum label and **not** a Z₀ measurement. Publish Sabu and null numbers together.
+**377 Hz** may be used as a drive (Newton’s Fibonacci-target **proposal**). It is **not** a museum label and **not** a Z₀ measurement. Publish Sabu and null numbers together.
 
 ---
 
@@ -154,11 +161,13 @@ Until then this repo is a **protocol + teaching sims**. After that, it is a **be
 
 **This repository** — Ben Rowe ([@SunWolf77](https://github.com/SunWolf77)): replica, null test, scripts, Z₀-as-second-map question.
 
-**Cited sources (not co-authors, not implied endorsement):**
+**Cited sources — not co-authors, not implied endorsement.**
 
-- **Emery 1949 · Egyptian Museum JE 71295** — form, find, dimensions.  
-- **Emily Newton, *Tesla Towers 377*** — 377 Hz as Fibonacci drive-target proposal. Not the impedance arm, not the replica protocol.  
-- **Paul Sheppard, SUPT** — proxy / remeasurement stance. Not a disk-function claim.
+| Source | Take | Do not attribute |
+| --- | --- | --- |
+| Emery 1949 · JE 71295 | Form, find, dimensions | Resonance, 377 Hz, function |
+| Newton, *Tesla Towers 377* | 377 Hz as optional Fibonacci drive | Z₀, replica protocol, disk function |
+| Sheppard, SUPT | Proxy / remeasurement stance | Disk function; Hz = Ω |
 
 Full table: [docs/citation_sheet.md](docs/citation_sheet.md).
 
