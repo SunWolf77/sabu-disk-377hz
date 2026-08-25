@@ -40,7 +40,7 @@ A peak on a teaching FFT is neither answer.
 flowchart TD
   R["Recover ±2π/3 in every cell first"]
   R --> Zp["Extra only in Z+"]
-  R --> Fp["Extra only in F+"]
+  R --> Fp["Extra only in F+ 377"]
   R --> J["Extra only in F+ Z+"]
   R --> N["All cells still ±2π/3"]
   R --> T["Pattern on 29–38 Hz"]
@@ -48,7 +48,7 @@ flowchart TD
   Fp --> Fc[golden-lock / Newton Hz arm]
   J --> Jc[joint claim]
   N --> Nc[coincidence]
-  T --> Tc[fluid-decade claim]
+  T --> Tc[fluid-decade / TORUS claim]
 ```
 
 ---
@@ -91,7 +91,7 @@ No printer? You do **not** need to generate STLs or run acoustics.
 | --- | --- |
 | **L1 — instrument** | Mic traces, measured print dimensions, blinded null scores |
 | **L2 — literature tools** | FFT, PIV ideas, standard acoustics |
-| **L3 — framework** | Optional 377 Hz drive (Newton); Z₀ rhyme (this repo) |
+| **L3 — framework** | Optional 377 Hz drive (Newton); optional 37.7/29/33/23 Hz arm (TORUS); Z₀ rhyme (this repo) |
 
 - Scripts under `code/fft_sweep.py`, `code/piv_simulation.py`, and files in `data/` **without** a `mic_` prefix are **simulations / teaching** — not microphone data.
 - A real band claim needs: print → fixed drive → **null twin** → `analyze_mic.py` → blinded score ([docs/NULL_TEST.md](docs/NULL_TEST.md)).
@@ -161,7 +161,7 @@ data/                            # SIM unless filename is mic_*
 | Doc | Role |
 | --- | --- |
 | [docs/BERRY_377.md](docs/BERRY_377.md) | 377 Hz / Z₀ holonomy 2×2 · Möbius ±2π/3 |
-| [docs/citation_sheet.md](docs/citation_sheet.md) | Who owns what · Emery, Newton, Sheppard |
+| [docs/citation_sheet.md](docs/citation_sheet.md) | Who owns what · Emery, Newton, Sheppard, TORUS, Paterson |
 | [docs/REPLICA.md](docs/REPLICA.md) | Dimensions, supports, what a print may claim |
 | [docs/ACOUSTIC_TEST.md](docs/ACOUSTIC_TEST.md) | Mode A forced response · Mode B eigenmodes |
 | [docs/NULL_TEST.md](docs/NULL_TEST.md) | Blind protocol + kill rule |
@@ -191,7 +191,7 @@ Full notes: [docs/REPLICA.md](docs/REPLICA.md).
 | **A — forced response** | Under the same drive, does Sabu-form differ from the null twin in a chosen band? |
 | **B — eigenmodes** | What does *this print* ring at when struck? |
 
-**377 Hz** may be used as a drive (Newton’s Fibonacci-target **proposal**). It is **not** a museum label and **not** a Z₀ measurement. Publish Sabu and null numbers together.
+**377 Hz** may be used as a drive (Newton). **37.7 / 29 / 33 / 23 Hz** is the parallel arm (@TORUS_OMEGA13). Neither is a museum label or a Z₀ measurement. Publish Sabu and null numbers together.
 
 ---
 
@@ -212,10 +212,12 @@ Until then this repo is a **protocol + teaching sims**. After that, it is a **be
 | --- | --- | --- |
 | Emery 1949 · JE 71295 | Form, find, dimensions | Resonance, 377 Hz, function |
 | Newton, *Tesla Towers 377* | 377 Hz as optional Fibonacci drive | Z₀, replica protocol, disk function |
+| @TORUS_OMEGA13 | Fluid decade 37.7 / 29 / 33 / 23 Hz; 377 as high harmonic | Z₀, Möbius null, disk function |
 | Sheppard, SUPT | Proxy / remeasurement stance | Disk function; Hz = Ω |
+| Paterson et al. (UWA) | Möbius ±2π/3 microwave null | Sabu, 377 Hz |
 
 Full table: [docs/citation_sheet.md](docs/citation_sheet.md).
 
 ## License
 
-MIT. Cite **JE 71295** and **Emery 1949** when publishing replicas or acoustic results. If you use 377 Hz as the drive, cite **Newton, *Tesla Towers 377***. If you use the Z₀ / holonomy discriminator, cite this repo.
+MIT. Cite **JE 71295** and **Emery 1949** when publishing replicas or acoustic results. If you use 377 Hz as the drive, cite **Newton, *Tesla Towers 377***. If you use the 37.7/29/33/23 Hz arm, cite **@TORUS_OMEGA13**. If you use the Z₀ / holonomy discriminator, cite this repo. If you use the ±2π/3 null, cite **Paterson et al.**
