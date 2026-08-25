@@ -11,6 +11,8 @@ Canonical repo: https://github.com/SunWolf77/sabu-disk-377hz
 
 The digits 377 appear as Fibonacci F₁₄ (Hz) and as free-space wave impedance Z₀ ≈ 376.73 Ω. Units are constructs. Treat as two proxy maps until a discriminator says otherwise.
 
+**Lineage (L3):** 377 Hz as F14 drive target is from **Emily Newton, *Tesla Towers 377*** (3-6-9 treated as an incomplete 2D loop). That paper does not develop the 377 Ω / Z₀ side. SUPT (Sheppard) is the proxy-remeasurement instrument. Neither is a museum label for JE 71295.
+
 ## Null (pre-register)
 
 Triangular Möbius microwave cavity vs mirror-symmetric twin: topological Berry phase **±2π/3** from D₃ helicity (TE₁,₀,n → n = ℤ ± ⅓). Conventional theory: this holonomy is independent of wall Z and of drive frequency if the cycle is adiabatic.
@@ -46,4 +48,4 @@ Recover ±2π/3 in **every** cell before trusting extra residual. Blind cell lab
 
 Haldane, Kane–Mele, extra Chern-insulator chapters. Same Wilson extractor, different base manifold — they do not move the 377 rhyme.
 
-Sabu replica + null twin + mic protocol: [README](../README.md), [NULL_TEST.md](NULL_TEST.md). JE 71295 · Emery 1949.
+Sabu replica + null twin + mic protocol: [README](../README.md), [NULL_TEST.md](NULL_TEST.md). JE 71295 · Emery 1949. Citations: [citation_sheet.md](citation_sheet.md).
