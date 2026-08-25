@@ -8,6 +8,8 @@ Discovered 19 January 1936 by Walter B. Emery
 
 Open tools to **copy the published form** and run **honest shape-vs-null acoustic comparisons**.
 
+**X-thread freeze (377 Hz · 377 Ω):** [docs/BERRY_377.md](docs/BERRY_377.md) — 2×2 holonomy vs Möbius ±2π/3. Not Haldane. Not Kane–Mele.
+
 ---
 
 ## Who this is for
@@ -15,6 +17,7 @@ Open tools to **copy the published form** and run **honest shape-vs-null acousti
 | You… | Start here |
 | --- | --- |
 | Want the museum facts only | [Museum facts](#museum-facts) |
+| Want the 377 Hz / Z₀ discriminator | [docs/BERRY_377.md](docs/BERRY_377.md) |
 | Want to generate a printable mesh | [Quick start](#quick-start) → STL step |
 | Have a printer + mic | [Physical path](#physical-path-one-pass) |
 | Are reviewing claims | [Claim hygiene](#claim-hygiene) |
@@ -27,7 +30,7 @@ No printer? You do **not** need to generate STLs or run acoustics. The docs are 
 ## Museum facts
 
 | Property | Value | Source |
-| --- | --- | --- |
+| --- | --- |
 | Outer diameter | **61 cm** | Emery 1949 |
 | Maximum height | **10.6 cm** | Emery 1949 |
 | Central hole | **~8 cm** | Museum descriptions |
@@ -106,6 +109,7 @@ data/                            # SIM unless filename is mic_*
 
 | Doc | Role |
 | --- | --- |
+| [docs/BERRY_377.md](docs/BERRY_377.md) | 377 Hz / Z₀ holonomy 2×2 · Möbius ±2π/3 |
 | [docs/REPLICA.md](docs/REPLICA.md) | Dimensions, supports, what a print may claim |
 | [docs/ACOUSTIC_TEST.md](docs/ACOUSTIC_TEST.md) | Mode A forced response · Mode B eigenmodes |
 | [docs/NULL_TEST.md](docs/NULL_TEST.md) | Blind protocol + kill rule |
