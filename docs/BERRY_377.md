@@ -7,11 +7,20 @@ Canonical repo: https://github.com/SunWolf77/sabu-disk-377hz
 
 ---
 
+## Attribution
+
+| | Hz (377 as Fibonacci drive) | Ω (Z₀ ≈ 376.73) | Artifact |
+| --- | --- | --- | --- |
+| **Newton, *Tesla Towers 377*** | Proposed 377 Hz as F14 / 3-6-9 correction | Not in that paper | Not a museum reading |
+| **Sheppard, SUPT** | Proxy stance: check the maps | Same | Not a function claim |
+| **This protocol** | Uses 377 Hz as one optional F+ cell | Adds Z₀ as the other map | Replica + Möbius twin |
+| **Emery / JE 71295** | — | — | Form and find only |
+
+Newton is cited for the **frequency target**. She is not a co-author of this discriminator and does not own the impedance arm.
+
 ## Claim (one line)
 
-The digits 377 appear as Fibonacci F₁₄ (Hz) and as free-space wave impedance Z₀ ≈ 376.73 Ω. Units are constructs. Treat as two proxy maps until a discriminator says otherwise.
-
-**Lineage (L3):** 377 Hz as F14 drive target is from **Emily Newton, *Tesla Towers 377*** (3-6-9 treated as an incomplete 2D loop). That paper does not develop the 377 Ω / Z₀ side. SUPT (Sheppard) is the proxy-remeasurement instrument. Neither is a museum label for JE 71295.
+The digits 377 appear as Fibonacci 377 (Hz) and as free-space wave impedance Z₀ ≈ 376.73 Ω. Units are constructs. Treat as two proxy maps until a discriminator says otherwise.
 
 ## Null (pre-register)
 
@@ -32,7 +41,7 @@ Parallel arm: 37.7 / 29 / 33 / 23 Hz (fluid decade). Match **d/λ**, not raw her
 
 - All four cells at ±2π/3 → coincidence
 - Extra only in Z+ → vacuum-match claim
-- Extra only in F+ → golden-lock claim
+- Extra only in F+ → golden-lock claim (Newton-style frequency arm)
 - Extra only in F+ Z+ → joint claim
 - Pattern on 29–38 Hz, weak at 377 Hz → fluid-geometry claim
 
@@ -48,4 +57,4 @@ Recover ±2π/3 in **every** cell before trusting extra residual. Blind cell lab
 
 Haldane, Kane–Mele, extra Chern-insulator chapters. Same Wilson extractor, different base manifold — they do not move the 377 rhyme.
 
-Sabu replica + null twin + mic protocol: [README](../README.md), [NULL_TEST.md](NULL_TEST.md). JE 71295 · Emery 1949. Citations: [citation_sheet.md](citation_sheet.md).
+Sabu replica + null twin + mic protocol: [README](../README.md), [NULL_TEST.md](NULL_TEST.md). Citations: [citation_sheet.md](citation_sheet.md).
