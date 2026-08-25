@@ -2,11 +2,12 @@
 
 | File | What it is |
 | --- | --- |
+| [BERRY_377.md](BERRY_377.md) | 377 Hz / Z₀ holonomy 2×2 · Möbius ±2π/3. Protocol freeze. |
+| [citation_sheet.md](citation_sheet.md) | Who owns what · Emery, Newton, Sheppard, this repo |
 | [REPLICA.md](REPLICA.md) | Museum dimensions, print scales, supports, allowed claims |
 | [ACOUSTIC_TEST.md](ACOUSTIC_TEST.md) | Mode A (forced response vs null) · Mode B (eigenmodes) |
 | [NULL_TEST.md](NULL_TEST.md) | Blinding steps + pre-registered kill rule |
 | [REPLICATION.md](REPLICATION.md) | How to add STL commits or mic runs without breaking hygiene |
-| [citation_sheet.md](citation_sheet.md) | Emery, El-Khouli, JE 71295, and related citations |
 | [BUGA_EXTENSION.md](BUGA_EXTENSION.md) | Optional Buga sim lane — **not** Sabu null-test |
 
 Root overview: [../README.md](../README.md)  
@@ -30,3 +31,5 @@ Generate with `code/export_stl_approx.py` or OpenSCAD. Approximate geometry only
 **Buga extension** — optional sphere-themed sims in `data/buga_sphere/`. Separate from Sabu L1.
 
 **L1 / L2 / L3** — instrument data / standard tools / interpretive framework. Keep them separate.
+
+**Newton vs this repo** — Newton is cited for an optional 377 Hz drive. Z₀ / holonomy is this repo. See [citation_sheet.md](citation_sheet.md).
