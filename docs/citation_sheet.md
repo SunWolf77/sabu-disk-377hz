@@ -1,5 +1,18 @@
 # Citation sheet — Sabu disk replication
 
+## Who owns what
+
+| Name | What we take from them | What we do **not** attribute to them |
+| --- | --- | --- |
+| **Emery 1949 · JE 71295** | Find, form, dimensions, siltstone | Any resonance, 377 Hz, or function |
+| **Newton, *Tesla Towers 377*** | 377 Hz as a Fibonacci (F14) **drive-target proposal**; 3-6-9 as an incomplete 2D loop | Z₀ / 377 Ω, the holonomy test, replica protocol, disk function |
+| **Sheppard, SUPT** | Proxy / remeasurement stance: same digits in two maps is a reason to check the maps | Disk function, identity of Hz with Ω |
+| **This repo (Rowe)** | STL + null twin + mic protocol; 2×2 holonomy discriminator vs Z₀ | Newton’s paper; SUPT as proof |
+
+Newton is a **cited source**, not a repo collaborator. Citing her does not mean she endorses the Z₀ test or the replica work.
+
+---
+
 ## Museum / archaeology (primary)
 
 - **Inventory:** Egyptian Museum, Cairo — **JE 71295**  
@@ -28,21 +41,15 @@ Weakly metamorphic siltstone (older literature often says “schist”). Fragile
 ## This repo’s experimental layer
 
 - Simulated FFT / PIV scripts = teaching tools (labelled in code).  
-- Physical claims require mic data + null twin + pre-registered metric (`docs/NULL_TEST.md`).  
-- SUPT probe (Sheppard) is a separate instrument for ordered series — not proof of disk function.
+- Physical claims require mic data + null twin + pre-registered metric (`docs/NULL_TEST.md`).
 
 ## Buga extension (out of Sabu L1)
 
 Scripts under `code/buga_*.py` and files in `data/buga_sphere/` are **synthetic teaching plots** only (`docs/BUGA_EXTENSION.md`).  
 They do **not** document or validate public media claims about a metallic sphere reported from Buga, Colombia (2025–). Those claims are external; this repo does not host their primary data.
 
-## Optional cultural / framework notes (L3 only)
+## L3 notes (keep out of the results table)
 
-- 377 ≈ F14; free-space impedance Z₀ ≈ 376.73 Ω — a **numeric rhyme**, not a measured carving tone on the artifact.  
-- Keep framework notes out of the results table until a transducer and null test exist.
-
-### 377 Hz as a test target (L3)
-
-- **Newton, Emily.** *Tesla Towers 377* (working paper). Treats **377 Hz** as the 15th Fibonacci number (F14 = 377) and as a correction of Tesla’s 3-6-9 cycle as an incomplete 2D loop. That framing is why 377 Hz is a **drive target** in this project. It is not a museum label, and it does not by itself identify 377 Ω (Z₀).  
-- **Sheppard, Paul.** SUPT (proxy / remeasurement). Ordered-series instrument — not a disk oracle.  
+- **Newton:** optional acoustic drive at 377 Hz (Fibonacci 377).  
+- **This repo:** 377 also appears as Z₀ ≈ 376.73 Ω. That is a **numeric rhyme we are testing**, not Newton’s claim.  
 - Holonomy discriminator: [BERRY_377.md](BERRY_377.md).
