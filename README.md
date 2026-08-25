@@ -50,7 +50,7 @@ No printer? You do **not** need to generate STLs or run acoustics. The docs are 
 | --- | --- |
 | **L1 — instrument** | Mic traces, measured print dimensions, blinded null scores |
 | **L2 — literature tools** | FFT, PIV ideas, standard acoustics |
-| **L3 — framework** | 377 Hz as F14, Z₀ rhyme, “modulator,” ancient intent |
+| **L3 — framework** | 377 Hz as F14 (Newton), Z₀ rhyme, “modulator,” ancient intent |
 
 - Scripts under `code/fft_sweep.py`, `code/piv_simulation.py`, and files in `data/` **without** a `mic_` prefix are **simulations / teaching** — not microphone data.
 - A real band claim needs: print → fixed drive → **null twin** → `analyze_mic.py` → blinded score ([docs/NULL_TEST.md](docs/NULL_TEST.md)).
@@ -114,7 +114,7 @@ data/                            # SIM unless filename is mic_*
 | [docs/ACOUSTIC_TEST.md](docs/ACOUSTIC_TEST.md) | Mode A forced response · Mode B eigenmodes |
 | [docs/NULL_TEST.md](docs/NULL_TEST.md) | Blind protocol + kill rule |
 | [docs/REPLICATION.md](docs/REPLICATION.md) | How to add a run without breaking hygiene |
-| [docs/citation_sheet.md](docs/citation_sheet.md) | Sources to cite |
+| [docs/citation_sheet.md](docs/citation_sheet.md) | Sources to cite (Emery, Newton, Sheppard) |
 
 ---
 
@@ -139,7 +139,7 @@ Full notes: [docs/REPLICA.md](docs/REPLICA.md).
 | **A — forced response** | Under the same drive, does Sabu-form differ from the null twin in a chosen band? |
 | **B — eigenmodes** | What does *this print* ring at when struck? |
 
-**377 Hz is a test target**, not a museum label. Publish Sabu and null numbers together.
+**377 Hz is a test target** (Newton, *Tesla Towers 377*), not a museum label. Publish Sabu and null numbers together.
 
 ---
 
@@ -153,9 +153,10 @@ Until then this repo is a **protocol + teaching sims**. After that, it is a **be
 ## Collaborators / lineage
 
 - Ben Rowe ([@SunWolf77](https://github.com/SunWolf77)) — replication / open science  
+- Emily Newton — *Tesla Towers 377*: 377 Hz as F14 pivot / 3-6-9 correction (L3 test-target framing; does not develop Z₀)  
 - Paul Sheppard — SUPT instrument context (separate ruler; not a disk oracle)  
 - Museum record — Emery 1949 · Egyptian Museum **JE 71295**
 
 ## License
 
-MIT. Cite **JE 71295** and **Emery 1949** when publishing replicas or acoustic results.
+MIT. Cite **JE 71295** and **Emery 1949** when publishing replicas or acoustic results. For the 377 Hz drive target, cite **Newton, Tesla Towers 377**.
