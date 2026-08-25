@@ -1,0 +1,31 @@
+Lane: holonomy 2x2 (not replica Mode A)
+Date:
+Operator:
+Cavity IDs (DUT A twisted / REF S symmetric):
+R (m):
+v vertex (m):
+Mode family (expect TE1,0,n helicity):
+
+Scale: d/λ matched?  yes/no   ratio:
+F+ frequencies (377*φ^n or scaled):
+F- frequencies (~20% detune, same d/λ):
+Z+ (target ~376.73 Ω, how realized):
+Z- (50 Ω or ~0.4 Z0, how realized):
+
+Extractor: twin Δf / Wilson / other:
+Blinded until γ extracted?  yes/no
+Key holder:
+
+PRE-REGISTERED NULL (Paterson et al., Phys. Rev. A 113, 04350 (2026); arXiv:2506.07320)
+  Every cell F± Z± must recover |γ| → 2π/3 (± tolerance) on helicity modes.
+  Rotationally symmetric modes → 0.
+  Kill extra-residual talk if this baseline fails in any cell.
+
+Tolerance on |γ| − 2π/3 (pre-register, rad):
+Repeats / second cavity:
+
+Cell table (fill after unblinding)
+  F+Z+   γ=     vs ±2π/3   extra=
+  F+Z-   γ=     vs ±2π/3   extra=
+  F-Z+   γ=     vs ±2π/3   extra=
+  F-Z-   γ=     vs ±2π/3   extra=
