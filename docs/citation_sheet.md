@@ -8,9 +8,12 @@
 | **Newton, *Tesla Towers 377*** | 377 Hz as a Fibonacci (F14) **drive-target proposal**; 3-6-9 as an incomplete 2D loop | Z₀ / 377 Ω, the holonomy test, replica protocol, disk function |
 | **Sheppard, SUPT** | Proxy / remeasurement stance: same digits in two maps is a reason to check the maps | Disk function, identity of Hz with Ω |
 | **Paterson, Tobar, Goryachev, Bourhill (UWA)** | Measured ±2π/3 on a triangular Möbius microwave cavity vs twin | Sabu, 377 Hz, Z₀ identity |
-| **This repo (Rowe)** | STL + null twin + mic protocol; 2×2 on that holonomy null vs Z₀ | Newton’s paper; SUPT as proof; Paterson as a 377 result |
+| **@TORUS_OMEGA13** (X thread) | 377 as a **high harmonic**; physically expressive fluid geometry nearer **37.7 / 29 / 33 / 23 Hz** (tourbillon decade). That is why the protocol has a parallel low-F arm | Z₀, Möbius null, replica protocol, disk function, identity of Hz with Ω |
+| **This repo (Rowe)** | STL + null twin + mic protocol; 2×2 on that holonomy null vs Z₀ | Newton’s paper; SUPT as proof; Paterson as a 377 result; TORUS as a cavity measurement |
 
 Cited sources are **not** repo collaborators. Citing them does not imply endorsement of the Z₀ test or of disk function.
+
+Thread posts used for the fluid-decade arm: [2092044155182608437](https://x.com/TORUS_OMEGA13/status/2092044155182608437), [2092047066943955157](https://x.com/TORUS_OMEGA13/status/2092047066943955157).
 
 ---
 
@@ -58,5 +61,6 @@ They do **not** document or validate public media claims about a metallic sphere
 ## L3 notes (keep out of the results table)
 
 - **Newton:** optional acoustic drive at 377 Hz (Fibonacci 377).  
-- **This repo:** 377 also appears as Z₀ ≈ 376.73 Ω. That is a **numeric rhyme we are testing**, not Newton’s claim.  
+- **@TORUS_OMEGA13:** optional parallel arm at 37.7 / 29 / 33 / 23 Hz. Same d/λ rule.  
+- **This repo:** 377 also appears as Z₀ ≈ 376.73 Ω. That is a **numeric rhyme we are testing**, not Newton’s or TORUS’s claim.  
 - Holonomy discriminator: [BERRY_377.md](BERRY_377.md).
