@@ -7,9 +7,10 @@
 | **Emery 1949 · JE 71295** | Find, form, dimensions, siltstone | Any resonance, 377 Hz, or function |
 | **Newton, *Tesla Towers 377*** | 377 Hz as a Fibonacci (F14) **drive-target proposal**; 3-6-9 as an incomplete 2D loop | Z₀ / 377 Ω, the holonomy test, replica protocol, disk function |
 | **Sheppard, SUPT** | Proxy / remeasurement stance: same digits in two maps is a reason to check the maps | Disk function, identity of Hz with Ω |
-| **This repo (Rowe)** | STL + null twin + mic protocol; 2×2 holonomy discriminator vs Z₀ | Newton’s paper; SUPT as proof |
+| **Paterson, Tobar, Goryachev, Bourhill (UWA)** | Measured ±2π/3 on a triangular Möbius microwave cavity vs twin | Sabu, 377 Hz, Z₀ identity |
+| **This repo (Rowe)** | STL + null twin + mic protocol; 2×2 on that holonomy null vs Z₀ | Newton’s paper; SUPT as proof; Paterson as a 377 result |
 
-Newton is a **cited source**, not a repo collaborator. Citing her does not mean she endorses the Z₀ test or the replica work.
+Cited sources are **not** repo collaborators. Citing them does not imply endorsement of the Z₀ test or of disk function.
 
 ---
 
@@ -18,7 +19,7 @@ Newton is a **cited source**, not a repo collaborator. Citing her does not mean 
 - **Inventory:** Egyptian Museum, Cairo — **JE 71295**  
 - **Excavation:** Walter B. Emery, 19 January 1936, mastaba **S3111**, Saqqara (Room E, beside burial)  
 - **Emery, W. B. (1949).** *Great Tombs of the First Dynasty*, Vol. 1. Cairo: Government Press. Especially Fig. 58 (plan and section).  
-- **El-Khouli, A. (1978).** *Egyptian Stone Vessels: Predynastic Period to Dynasty III*. Mainz: Philipp von Zabern. Vol. 2, p. 730, no. 5586; Vol. 3, pls. 135 (drawing), 158 (photo).
+- **El-Khouli, A. (1978).** *Egyptian Stone Vessels: Predynastic Period to Dynasty III*. Mainz: Philipp von Zabern. Vol. 2, p. 730, no. 5586; Vol. 3, pls. 135, 158.
 
 ## Dimensions used in this repo
 
@@ -38,10 +39,16 @@ Weakly metamorphic siltstone (older literature often says “schist”). Fragile
 
 **Unknown.** Emery suggested ceremonial vessel / stand-mounted container; no consensus. Modern mechanical or acoustic readings are **hypotheses**, not museum labels.
 
+## Literature (holonomy null)
+
+- **Paterson, E. C. I., Tobar, M. E., Goryachev, M. & Bourhill, J.** *Distinct Berry phases in a single triangular Möbius microwave resonator.* Phys. Rev. A **113**, 04350 (2026). [doi:10.1103/qnym-rzrs](https://doi.org/10.1103/qnym-rzrs). Also [arXiv:2506.07320](https://arxiv.org/abs/2506.07320). Quantum Technologies and Dark Matter Labs, University of Western Australia. TE₁,₀,n ±2π/3 vs mirror twin.
+
 ## This repo’s experimental layer
 
 - Simulated FFT / PIV scripts = teaching tools (labelled in code).  
-- Physical claims require mic data + null twin + pre-registered metric (`docs/NULL_TEST.md`).
+- `code/wilson_extract.py` = Pancharatnam pipeline check + four-cell pre-register. **Not FEM.**  
+- `code/scale_d_lambda.py` = d/λ scaling. **Not a frequency identity.**  
+- Physical claims require mic data + null twin + pre-registered metric (`docs/NULL_TEST.md`). Holonomy claims require [templates/pre_register_holonomy.txt](../templates/pre_register_holonomy.txt).
 
 ## Buga extension (out of Sabu L1)
 
