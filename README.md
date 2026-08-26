@@ -104,26 +104,27 @@ No printer? You do **not** need to generate STLs or run acoustics.
 ```bash
 git clone https://github.com/SunWolf77/sabu-disk-377hz.git
 cd sabu-disk-377hz
-pip install -r requirements.txt
 
-# Optional: printable meshes (stdlib only)
-python code/export_stl_approx.py --scale 0.25 --out STL
+# Printable meshes — Python stdlib only, no pip required
+bash code/generate_stls.sh
 # → STL/sabu_approx_1to4.stl + STL/null_twin_1to4.stl
+# Details: STL/README.md
 
-# Teaching simulations (not physical data)
-python code/fft_sweep.py
-python code/piv_simulation.py
+# Optional teaching simulations (not physical data)
+pip install -r requirements.txt
+python3 code/fft_sweep.py
+python3 code/piv_simulation.py
 
 # After a real recording
-python code/analyze_mic.py path/to/mic_run.wav --f0 377 --half 2
-python code/analyze_mic.py mic_a.wav mic_b.wav --compare
+python3 code/analyze_mic.py path/to/mic_run.wav --f0 377 --half 2
+python3 code/analyze_mic.py mic_a.wav mic_b.wav --compare
 ```
 
 ### Physical path (one pass)
 
 ```mermaid
 flowchart TD
-  S[export_stl_approx.py 1:4] --> P[Print Sabu-form AND null]
+  S[generate_stls.sh 1:4] --> P[Print Sabu-form AND null]
   P --> L[print_log.csv]
   L --> R[pre_register.txt]
   R --> M[Mode A same drive]
@@ -131,15 +132,14 @@ flowchart TD
   B --> C[Commit mic_ files]
 ```
 
-1. **Generate STLs** — `python code/export_stl_approx.py --scale 0.25 --out STL`  
-2. **Print** — [docs/REPLICA.md](docs/REPLICA.md) (Sabu-form **and** null twin)  
-3. **Log** — [templates/print_log.csv](templates/print_log.csv)  
-4. **Pre-register** — [templates/pre_register.txt](templates/pre_register.txt)  
-5. **Acoustics** — [docs/ACOUSTIC_TEST.md](docs/ACOUSTIC_TEST.md) (Mode A)  
-6. **Blind & score** — [docs/NULL_TEST.md](docs/NULL_TEST.md)  
-7. **Commit** — [docs/REPLICATION.md](docs/REPLICATION.md)
-
-Details for mesh commit: [STL/README.md](STL/README.md).
+1. **Generate STLs** — `bash code/generate_stls.sh` ([STL/README.md](STL/README.md))  
+2. **Verify** — slicer preview: three open kidneys on Sabu; plain bowl on null  
+3. **Print** — [docs/REPLICA.md](docs/REPLICA.md) (Sabu-form **and** null twin)  
+4. **Log** — [templates/print_log.csv](templates/print_log.csv)  
+5. **Pre-register** — [templates/pre_register.txt](templates/pre_register.txt)  
+6. **Acoustics** — [docs/ACOUSTIC_TEST.md](docs/ACOUSTIC_TEST.md) (Mode A)  
+7. **Blind & score** — [docs/NULL_TEST.md](docs/NULL_TEST.md)  
+8. **Commit** — [docs/REPLICATION.md](docs/REPLICATION.md)
 
 ---
 
@@ -147,7 +147,8 @@ Details for mesh commit: [STL/README.md](STL/README.md).
 
 ```
 code/
-  export_stl_approx.py           # Sabu + null STLs (Python stdlib)
+  generate_stls.sh               # one-command Sabu + null STLs
+  export_stl_approx.py           # called by generate_stls.sh (stdlib)
   openscad/sabu_disk_approx.scad # finer parametric model
   analyze_mic.py                 # Mode A metric from WAV / CSV
   acoustic_logger.ino            # relative multi-mic stream
@@ -173,14 +174,14 @@ data/                            # SIM unless filename is mic_*
 ## 3D printing (short)
 
 ```bash
-python code/export_stl_approx.py --scale 0.25 --out STL
+bash code/generate_stls.sh
 ```
 
-- Prefer that exporter or `code/openscad/sabu_disk_approx.scad` — **not** any `*placeholder*` mesh.
+- Prefer that script / `export_stl_approx.py` or `code/openscad/sabu_disk_approx.scad` — **not** any `*placeholder*` mesh.
 - Bowl up; supports under lobe undersides only; keep kidneys and hub bore open.
 - PLA ≠ siltstone. Log mass, walls, measured Ø with every acoustic run.
 
-Full notes: [docs/REPLICA.md](docs/REPLICA.md).
+Full notes: [docs/REPLICA.md](docs/REPLICA.md) · [STL/README.md](STL/README.md).
 
 ---
 
