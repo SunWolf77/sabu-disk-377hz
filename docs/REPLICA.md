@@ -66,7 +66,7 @@ Tune curvature without rewriting the file:
 Full scale (610 mm) needs a large-format printer or segmented print.
 
 | Scale | Diameter | Height | Use |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | **1:1** | 610 mm | 106 mm | Museum-scale; specialist beds or multi-part |
 | **1:2** | 305 mm | 53 mm | Serious acoustic / photo study |
 | **1:4** | 152.5 mm | 26.5 mm | Desk acoustic null tests |
@@ -157,14 +157,27 @@ Use as a checklist; tune to your machine.
 
 ## 6. Workflow
 
+### Default (Python, no OpenSCAD)
+
+1. From repo root: `bash code/generate_stls.sh`  
+   (or `python3 code/export_stl_approx.py --scale 0.25 --out STL`).  
+2. Confirm `STL/sabu_approx_1to4.stl` and `STL/null_twin_1to4.stl` exist.  
+3. Slicer check: three open kidneys + bore on Sabu; plain bowl + hub on null.  
+4. Slice with §5 support rules → print both.  
+5. Clear kidneys; photograph next to a ruler; log actual diameter, height, mass in `templates/print_log.csv`.  
+6. Fill `templates/pre_register.txt` **before** any tone.  
+7. Acoustic work: follow `docs/NULL_TEST.md`.
+
+Details: [STL/README.md](../STL/README.md).
+
+### Optional OpenSCAD (finer lobes)
+
 1. Open `code/openscad/sabu_disk_approx.scad`.  
 2. Set `scale_factor` (e.g. `0.25` for 1:4).  
 3. Optional: nudge `OPEN_HALF` / `SPOKE_RISE` until plan view matches Emery’s wide-spoke look.  
 4. Render → export STL (`sabu_approx`).  
 5. Comment out `sabu_approx();`, uncomment `null_twin();`, export second STL under a **code name**.  
-6. Slice with §5 support rules → print both.  
-7. Clear kidneys; photograph next to a ruler; log actual diameter and height.  
-8. Acoustic work: follow `docs/NULL_TEST.md`.
+6. Continue from step 3 of the default path.
 
 ---
 
