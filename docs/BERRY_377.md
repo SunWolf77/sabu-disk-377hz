@@ -13,6 +13,9 @@ Quantum Technologies and Dark Matter Labs, University of Western Australia.
 
 They measured ±2π/3 on TE₁,₀,n helicity modes of a D₃ Möbius ring vs a mirror twin. That is the **baseline**. It is not a Sabu result and not a 377 Hz result.
 
+**Z-arm handbook (cite this, do not absorb it):**  
+Moreno, T. *Microwave Transmission Design Data.* Sperry / McGraw-Hill, 1948; Dover reprint 1958. Chap. 3 eq. (3-2): \(Z_w = 377\sqrt{\mu/\varepsilon}\) ohms. Free space (\(\mu=\varepsilon=1\)) → 377 Ω. This is the rounded engineering form of \(Z_0 \approx 376.73\ \Omega\). It is not a 377 Hz result and not a Sabu result.
+
 ---
 
 ## Attribution
@@ -22,11 +25,12 @@ They measured ±2π/3 on TE₁,₀,n helicity modes of a D₃ Möbius ring vs a 
 | **Newton, *Tesla Towers 377*** | 377 Hz as F14 / 3-6-9 correction | Not in that paper | Not a museum reading |
 | **@TORUS_OMEGA13** | 377 as high harmonic; fluid decade 37.7 / 29 / 33 / 23 Hz | Not that claim | Not a museum reading |
 | **Sheppard, SUPT** | Proxy stance: check the maps | Same | Not a function claim |
+| **Moreno 1948** | — | 377 Ω as \(Z_w\) in free space; matching / SWR | Not a museum reading |
 | **Paterson et al. (UWA)** | — | — | Möbius ±2π/3 (microwave) |
 | **This protocol** | Uses both F sets as optional cells | Adds Z₀ as the other map | Replica + 2×2 on that null |
 | **Emery / JE 71295** | — | — | Form and find only |
 
-Newton is cited for the **high-F target**. @TORUS_OMEGA13 is cited for the **low-F / fluid-decade target**. Paterson et al. are cited for the **holonomy null**. None of them owns the Z₀ arm or the disk.
+Newton is cited for the **high-F target**. @TORUS_OMEGA13 is cited for the **low-F / fluid-decade target**. Moreno is cited for the **377 Ω handbook form**. Paterson et al. are cited for the **holonomy null**. None of them owns the disk.
 
 ## Claim (one line)
 
