@@ -8,8 +8,9 @@
 | **Newton, *Tesla Towers 377*** | 377 Hz as a Fibonacci (F14) **drive-target proposal**; 3-6-9 as an incomplete 2D loop | Z₀ / 377 Ω, the holonomy test, replica protocol, disk function |
 | **Sheppard, SUPT** | Proxy / remeasurement stance: same digits in two maps is a reason to check the maps | Disk function, identity of Hz with Ω |
 | **Paterson, Tobar, Goryachev, Bourhill (UWA)** | Measured ±2π/3 on a triangular Möbius microwave cavity vs twin | Sabu, 377 Hz, Z₀ identity |
+| **Moreno 1948** | Engineering source for free-space **wave impedance** rounded to 377 Ω: \(Z_w = 377\sqrt{\mu/\varepsilon}\) (Chap. 3, eq. 3-2). Matching / standing-wave context for the Z arm | 377 Hz, Sabu, disk function, Hz = Ω |
 | **@TORUS_OMEGA13** (X thread) | 377 as a **high harmonic**; physically expressive fluid geometry nearer **37.7 / 29 / 33 / 23 Hz** (tourbillon decade). That is why the protocol has a parallel low-F arm | Z₀, Möbius null, replica protocol, disk function, identity of Hz with Ω |
-| **This repo (Rowe)** | STL + null twin + mic protocol; 2×2 on that holonomy null vs Z₀ | Newton’s paper; SUPT as proof; Paterson as a 377 result; TORUS as a cavity measurement |
+| **This repo (Rowe)** | STL + null twin + mic protocol; 2×2 on that holonomy null vs Z₀ | Newton’s paper; SUPT as proof; Paterson as a 377 result; TORUS as a cavity measurement; Moreno as a disk or Hz claim |
 
 Cited sources are **not** repo collaborators. Citing them does not imply endorsement of the Z₀ test or of disk function.
 
@@ -46,6 +47,10 @@ Weakly metamorphic siltstone (older literature often says “schist”). Fragile
 
 - **Paterson, E. C. I., Tobar, M. E., Goryachev, M. & Bourhill, J.** *Distinct Berry phases in a single triangular Möbius microwave resonator.* Phys. Rev. A **113**, 04350 (2026). [doi:10.1103/qnym-rzrs](https://doi.org/10.1103/qnym-rzrs). Also [arXiv:2506.07320](https://arxiv.org/abs/2506.07320). Quantum Technologies and Dark Matter Labs, University of Western Australia. TE₁,₀,n ±2π/3 vs mirror twin.
 
+## Literature (377 Ω wave-impedance map)
+
+- **Moreno, T. (1948).** *Microwave Transmission Design Data.* New York: McGraw-Hill / Sperry. Dover reprint 1958 (LCCN 58-11278). Chapter 3, §1 Characteristic Impedance, eq. (3-2): \(Z_w = 377\sqrt{\mu/\varepsilon}\) ohms; in free space \(\mu=\varepsilon=1\) → 377 Ω. TE/TM waveguide forms follow as eqs. (3-3) ff. Engineering handbook (wartime radar notes), **not** a claim about 377 Hz or JE 71295.
+
 ## This repo’s experimental layer
 
 - Simulated FFT / PIV scripts = teaching tools (labelled in code).  
@@ -62,5 +67,6 @@ They do **not** document or validate public media claims about a metallic sphere
 
 - **Newton:** optional acoustic drive at 377 Hz (Fibonacci 377).  
 - **@TORUS_OMEGA13:** optional parallel arm at 37.7 / 29 / 33 / 23 Hz. Same d/λ rule.  
-- **This repo:** 377 also appears as Z₀ ≈ 376.73 Ω. That is a **numeric rhyme we are testing**, not Newton’s or TORUS’s claim.  
+- **Moreno:** pedigree for the rounded 377 Ω free-space wave impedance.  
+- **This repo:** 377 also appears as Z₀ ≈ 376.73 Ω. That is a **numeric rhyme we are testing**, not Newton’s, TORUS’s, or Moreno’s claim about the disk.  
 - Holonomy discriminator: [BERRY_377.md](BERRY_377.md).
