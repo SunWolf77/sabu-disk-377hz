@@ -12,9 +12,47 @@ Open tools to **copy the published form** and run **honest shape-vs-null acousti
 | Read | File |
 | --- | --- |
 | Museum form | this README → [Museum facts](#museum-facts) |
+| What belongs in this repo | [Scope](#what-this-repo-is) |
+| Planar vs volumetric cousins | [Hypothesis link](#planar-vs-volumetric--hypothesis-not-a-result) |
 | 377 Hz / Z₀ discriminator | [docs/BERRY_377.md](docs/BERRY_377.md) |
 | Who owns which claim | [docs/citation_sheet.md](docs/citation_sheet.md) |
 | Print + mic | [Physical path](#physical-path-one-pass) |
+
+## What this repo is
+
+**Primary bench:** one object (the published Sabu bowl) versus a **null twin** under the same drive.
+
+Parked next to that bench, clearly labelled L3 / extension — **not** Mode A results:
+
+| Also in the tree | Why it is here | What it is not |
+| --- | --- | --- |
+| Optional 377 Hz dwell (Newton) | One frequency someone may use on the print | Not a museum label |
+| Optional 37.7 / 29 / 33 / 23 Hz (TORUS) | Parallel dwell list | Not disk function |
+| Z₀ ≈ 377 Ω (Moreno 1948 handbook form) | Pedigree for the **ohm** map of the same digits | Not 377 Hz; not Sabu |
+| Holonomy 2×2 ([BERRY_377.md](docs/BERRY_377.md)) | How you would test Hz vs Ω **if** you had cavities | Not this print; not a result |
+| Buga sims + Roman dodecahedron note | Same *question type* (volumetric cousin) | Not measured; not JE 71295 |
+
+A stranger should be able to clone this repo and run **only** the replica lane. Everything else is optional reading.
+
+## Planar vs volumetric — hypothesis, not a result
+
+Reason these other shapes are *mentioned* here:
+
+| Object | Geometry | Wave picture (hypothesis) |
+| --- | --- | --- |
+| **Sabu disk** (this repo’s L1) | Thin 3-fold **bowl / disk** | Planar / surface standing patterns |
+| **Buga sphere** (extension folder only) | Closed **volume** (claimed) | Cavity / interior modes |
+| **Roman dodecahedron** (note only — no files) | Hollow 12-face shell, mixed hole sizes | Another volumetric / ported shell |
+
+Planar sheet vs volumetric cavity is a real distinction in acoustics and EM. Treating them as **different slices of the same question** is allowed as framework.
+
+It is **not** allowed as data:
+
+- No Sabu `mic_` modes exist yet.
+- Buga files in this repo are **synthetic teaching plots** ([docs/BUGA_EXTENSION.md](docs/BUGA_EXTENSION.md)).
+- Roman dodecahedra are a real Gallo-Roman class whose function is **unknown** — same honest box as Emery on Sabu. This repo does not host dodecahedron meshes or measurements.
+
+Keep results tables separate. Do not put a Buga PNG or a dodecahedron story in a Sabu Mode A score sheet.
 
 ## Two tests (do not mix)
 
@@ -91,11 +129,12 @@ No printer? You do **not** need to generate STLs or run acoustics.
 | --- | --- |
 | **L1 — instrument** | Mic traces, measured print dimensions, blinded null scores |
 | **L2 — literature tools** | FFT, PIV ideas, standard acoustics |
-| **L3 — framework** | Optional 377 Hz drive (Newton); optional 37.7/29/33/23 Hz arm (TORUS); Z₀ rhyme (this repo) |
+| **L3 — framework** | Optional 377 Hz drive (Newton); optional 37.7/29/33/23 Hz arm (TORUS); Z₀ rhyme + Moreno handbook cite; planar/volumetric *question* |
 
 - Scripts under `code/fft_sweep.py`, `code/piv_simulation.py`, and files in `data/` **without** a `mic_` prefix are **simulations / teaching** — not microphone data.
 - A real band claim needs: print → fixed drive → **null twin** → `analyze_mic.py` → blinded score ([docs/NULL_TEST.md](docs/NULL_TEST.md)).
 - Printing proves **form is reproducible**. It does not prove resonance or purpose.
+- Volumetric cousins stay in [docs/BUGA_EXTENSION.md](docs/BUGA_EXTENSION.md). They do not enter the Sabu score table.
 
 ---
 
@@ -153,6 +192,7 @@ code/
   analyze_mic.py                 # Mode A metric from WAV / CSV
   acoustic_logger.ino            # relative multi-mic stream
   fft_sweep.py · piv_simulation.py   # SIM only
+  buga_*.py                      # volumetric SIM sketches only
 docs/                            # protocols — see docs/README_docs.md
 STL/                             # generate meshes here
 templates/                       # print log + pre-register
@@ -161,12 +201,13 @@ data/                            # SIM unless filename is mic_*
 
 | Doc | Role |
 | --- | --- |
-| [docs/BERRY_377.md](docs/BERRY_377.md) | 377 Hz / Z₀ holonomy 2×2 · Möbius ±2π/3 |
-| [docs/citation_sheet.md](docs/citation_sheet.md) | Who owns what · Emery, Newton, Sheppard, TORUS, Paterson |
+| [docs/BERRY_377.md](docs/BERRY_377.md) | 377 Hz / Z₀ holonomy 2×2 · Möbius ±2π/3 · Moreno Z arm |
+| [docs/citation_sheet.md](docs/citation_sheet.md) | Who owns what · Emery, Newton, Sheppard, TORUS, Moreno, Paterson |
 | [docs/REPLICA.md](docs/REPLICA.md) | Dimensions, supports, what a print may claim |
 | [docs/ACOUSTIC_TEST.md](docs/ACOUSTIC_TEST.md) | Mode A forced response · Mode B eigenmodes |
 | [docs/NULL_TEST.md](docs/NULL_TEST.md) | Blind protocol + kill rule |
 | [docs/REPLICATION.md](docs/REPLICATION.md) | How to add a run without breaking hygiene |
+| [docs/BUGA_EXTENSION.md](docs/BUGA_EXTENSION.md) | Volumetric cousins — **not** Sabu L1 |
 | [docs/README_docs.md](docs/README_docs.md) | Docs map |
 
 ---
@@ -215,10 +256,11 @@ Until then this repo is a **protocol + teaching sims**. After that, it is a **be
 | Newton, *Tesla Towers 377* | 377 Hz as optional Fibonacci drive | Z₀, replica protocol, disk function |
 | @TORUS_OMEGA13 | Fluid decade 37.7 / 29 / 33 / 23 Hz; 377 as high harmonic | Z₀, Möbius null, disk function |
 | Sheppard, SUPT | Proxy / remeasurement stance | Disk function; Hz = Ω |
+| Moreno 1948 | 377 Ω as free-space wave impedance (eq. 3-2) | 377 Hz, Sabu, Hz = Ω |
 | Paterson et al. (UWA) | Möbius ±2π/3 microwave null | Sabu, 377 Hz |
 
 Full table: [docs/citation_sheet.md](docs/citation_sheet.md).
 
 ## License
 
-MIT. Cite **JE 71295** and **Emery 1949** when publishing replicas or acoustic results. If you use 377 Hz as the drive, cite **Newton, *Tesla Towers 377***. If you use the 37.7/29/33/23 Hz arm, cite **@TORUS_OMEGA13**. If you use the Z₀ / holonomy discriminator, cite this repo. If you use the ±2π/3 null, cite **Paterson et al.**
+MIT. Cite **JE 71295** and **Emery 1949** when publishing replicas or acoustic results. If you use 377 Hz as the drive, cite **Newton, *Tesla Towers 377***. If you use the 37.7/29/33/23 Hz arm, cite **@TORUS_OMEGA13**. If you use the Z₀ / holonomy discriminator, cite this repo. If you use the 377 Ω handbook form, cite **Moreno 1948**. If you use the ±2π/3 null, cite **Paterson et al.**
